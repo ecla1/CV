@@ -1,164 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elias Classe - CV</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f6f8;
-        }
-        .cv-container {
-            display: flex;
-            max-width: 1000px;
-            margin: auto;
-            background-color: white;
-            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-        }
-        .sidebar {
-            background-color: #0d47a1;
-            color: white;
-            width: 30%;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        .sidebar img {
-            border-radius: 50%;
-            display: block;
-            margin: 0 auto 20px auto;
-        }
-        .sidebar h1 {
-            font-size: 22px;
-            text-align: center;
-            margin-bottom: 5px;
-        }
-        .sidebar p {
-            text-align: center;
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-        .sidebar h2 {
-            border-bottom: 2px solid white;
-            padding-bottom: 5px;
-            margin-top: 20px;
-        }
-        .sidebar ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        .sidebar ul li {
-            margin: 10px 0;
-        }
-        .main {
-            width: 70%;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        .main h2 {
-            color: #0d47a1;
-            border-bottom: 2px solid #0d47a1;
-            padding-bottom: 5px;
-        }
-        .main ul {
-            padding-left: 20px;
-        }
-        .main h4 {
-            margin-bottom: 3px;
-            color: #0d47a1;
-        }
-        hr {
-            border: none;
-            height: 1px;
-            background-color: #ddd;
-            margin: 20px 0;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elias Classe – CV</title>
+  <style>
+    :root {
+      --blue-900: #0d47a1;
+      --blue-800: #1565c0;
+      --blue-100: #e3f2fd;
+      --text: #1f2937;
+      --muted: #6b7280;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; color: var(--text); background: #f5f7fb; }
+
+    /* Container */
+    .cv { max-width: 1000px; margin: 24px auto; background: #fff; display: grid; grid-template-columns: 300px 1fr; box-shadow: 0 6px 20px rgba(0,0,0,.08); border-radius: 14px; overflow: hidden; }
+
+    /* Sidebar */
+    .sidebar { background: linear-gradient(180deg, var(--blue-900), var(--blue-800)); color: #fff; padding: 28px 24px; }
+    .name { font-size: 28px; font-weight: 700; letter-spacing: .3px; margin: 0 0 4px; }
+    .title { margin: 0 0 20px; opacity: .9; font-style: italic; }
+    .side-block + .side-block { margin-top: 22px; }
+    .side-h { font-size: 14px; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 10px; padding-bottom: 8px; border-bottom: 2px solid rgba(255,255,255,.35); }
+    .list { list-style: none; padding: 0; margin: 0; }
+    .list li { margin: 8px 0; line-height: 1.4; }
+    .chip { display: inline-block; border: 1px solid rgba(255,255,255,.4); padding: 6px 10px; border-radius: 999px; margin: 6px 6px 0 0; font-size: 12px; }
+
+    /* Main */
+    .main { padding: 28px; }
+    .section { margin-bottom: 26px; }
+    .h2 { color: var(--blue-900); border-bottom: 2px solid var(--blue-900); padding-bottom: 8px; margin: 0 0 14px; font-size: 18px; }
+    .summary { line-height: 1.6; color: var(--text); }
+    .role { margin: 0; color: var(--blue-900); font-weight: 700; }
+    .meta { margin: 4px 0 10px; color: var(--muted); font-size: 14px; }
+    .bullets { margin: 0; padding-left: 18px; }
+    .bullets li { margin: 6px 0; }
+
+    /* Print tweaks */
+    @media print {
+      body { background: #fff; }
+      .cv { margin: 0; box-shadow: none; border-radius: 0; }
+      a { color: inherit; text-decoration: none; }
+      .chip { border-color: #cbd5e1; color: #111827; }
+    }
+  </style>
 </head>
 <body>
-    <div class="cv-container">
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <h1>Elias Classe</h1>
-            <p>Director of Payroll</p>
+  <div class="cv">
+    <aside class="sidebar">
+      <h1 class="name">Elias Classe</h1>
+      <p class="title">Director of Payroll</p>
 
-            <h2>Contact</h2>
-            <ul>
-                <li>📞 829-844-7268</li>
-                <li>📧 eliasclasse@gmail.com</li>
-                <li>🔗 www.linkedin.com/in/eliasclasse-52b77221a</li>
-            </ul>
+      <section class="side-block">
+        <h3 class="side-h">Contact</h3>
+        <ul class="list">
+          <li>📞 829-844-7268</li>
+          <li>📧 eliasclasse@gmail.com</li>
+          <li>🔗 www.linkedin.com/in/eliasclasse-52b77221a</li>
+        </ul>
+      </section>
 
-            <h2>Skills</h2>
-            <ul>
-                <li>MS Office & Google Suite</li>
-                <li>Looker Studio</li>
-                <li>Data Analysis & Reporting</li>
-                <li>Time Management & Leadership</li>
-                <li>Python (basic)</li>
-                <li>HTML (basic)</li>
-                <li>Salesforce Admin (Intermediate)</li>
-            </ul>
+      <section class="side-block">
+        <h3 class="side-h">Skills</h3>
+        <div>
+          <span class="chip">MS Office</span>
+          <span class="chip">Google Workspace</span>
+          <span class="chip">Looker Studio</span>
+          <span class="chip">Data Analysis</span>
+          <span class="chip">Reporting</span>
+          <span class="chip">Time Management</span>
+          <span class="chip">Leadership</span>
+          <span class="chip">Python (basic)</span>
+          <span class="chip">HTML (basic)</span>
+          <span class="chip">Salesforce Admin (Intermediate)</span>
         </div>
+      </section>
+    </aside>
 
-        <!-- Main Content -->
-        <div class="main">
-            <h2>Summary</h2>
-            <p>
-                Operations and Quality Leader with extensive experience in the call center industry, serving as Acting Operations Manager and Quality Manager across multiple campaigns. Skilled at identifying areas of opportunity, improving processes, and driving performance results through data-driven strategies and team leadership.<br><br>
+    <main class="main">
+      <section class="section">
+        <h2 class="h2">Summary</h2>
+        <p class="summary">
+          Operations and Quality Leader with extensive experience in the call center industry, serving as Acting Operations Manager and Quality Manager across multiple campaigns. Skilled at identifying areas of opportunity, improving processes, and driving performance results through data-driven strategies and team leadership.
+          <br /><br />
+          Proficient in leveraging analytical and reporting tools such as Excel, Business Intelligence platforms, Looker Studio, and CRMs including Salesforce, Hosted, Zendesk, and others, to transform raw data into actionable insights that support decision making and continuous improvement.
+          <br /><br />
+          Currently serving as Payroll Director, bringing additional expertise in managing payroll operations for healthcare facilities in the U.S. This role enhances my ability to handle compliance, reporting accuracy, and large-scale operational processes.
+          <br /><br />
+          A results-oriented professional with a proven track record in process optimization, performance management, and delivering measurable business outcomes.
+        </p>
+      </section>
 
-Proficient in leveraging analytical and reporting tools such as Excel, Business Intelligence platforms, Looker Studio, and CRMs including Salesforce, Hosted, Zendesk, and others, to transform raw data into actionable insights that support decision making and continuous improvement.<br><br>
-
-Currently serving as Payroll Director, bringing additional expertise in managing payroll operations for healthcare facilities in the U.S. This role enhances my ability to handle compliance, reporting accuracy, and large-scale operational processes.<br><br>
-
-A results-oriented professional with a proven track record in process optimization, performance management, and delivering measurable business outcomes.<br>
-            </p>
-
-            <h2>Work Experience</h2>
-            <ul>
-                <li>
-                    <h4>Director of Payroll - Northwood Healthcare</h4>
-                    <p>March 2023 - Present (2 year 5 months), United States (Remote)</p>
-                    <ul>
-                        <li>Manage payroll operations for multiple healthcare facilities across the United States.</li>
-                        <li>Ensure accuracy in employee profiles, insurance deductions, and payroll adjustments.</li>
-                        <li>Oversee payroll compliance with regulations and internal policies.</li>
-                        <li>Drive operational efficiency in remote payroll management processes.</li>
-                        <li>Address and resolve payroll-related issues to ensure employee satisfaction.</li>
-                    </ul>
-                </li>
-                <li>
-                    <h4>Quality Assurance Manager - TLC Associates</h4>
-                    <p>November 2022 - March 2023 (5 months), Dominican Republic</p>
-                    <ul>
-                        <li>Oversaw the quality of multiple campaigns.</li>
-                        <li>Provided performance visibility using tools like Excel, PowerPoint, and Looker Studio.</li>
-                        <li>Developed plans to maintain high interaction quality.</li>
-                        <li>Managed and supported the QA team to ensure consistent results across campaigns.</li>
-                    </ul>
-                </li>
-                <li>
-                    <h4>Quality Assurance Supervisor - Acquire BPO</h4>
-                    <p>March 2018 - November 2022 (4 years 9 months)</p>
-                    <ul>
-                        <li>Led a large team of quality assurance professionals.</li>
-                        <li>Oversaw the evaluation of customer interactions to ensure quality standards.</li>
-                        <li>Developed data-driven improvement strategies to enhance performance.</li>
-                        <li>Implemented continuous improvement cycles to maintain high-quality standards.</li>
-                    </ul>
-                </li>
-                <li>
-                    <h4>Team Leader - Convergys</h4>
-                    <p>December 2012 - March 2018 (5 years 4 months)</p>
-                    <ul>
-                        <li>Managed and monitored agents across different campaigns.</li>
-                        <li>Worked with various clients, each with unique KPIs and SOWs, expanding industry knowledge.</li>
-                        <li>Created reports to provide visibility on key campaign aspects (AHT, CSAT, NPS, Quality, Productivity, Attendance).</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
+      <section class="section">
+        <h2 class="h2">Work Experience</h2>
+        <article>
+          <h3 class="role">Director of Payroll – Northwood Healthcare</h3>
+          <p class="meta">March 2023 – Present · United States (Remote)</p>
+          <ul class="bullets">
+            <li>Manage payroll operations for multiple healthcare facilities across the United States.</li>
+            <li>Ensure accuracy in employee profiles, insurance deductions, and payroll adjustments.</li>
+            <li>Oversee payroll compliance with regulations and internal policies.</li>
+            <li>Drive operational efficiency in remote payroll management processes.</li>
+            <li>Address and resolve payroll-related issues to ensure employee satisfaction.</li>
+          </ul>
+        </article>
+        <br />
+        <article>
+          <h3 class="role">Quality Assurance Manager – TLC Associates</h3>
+          <p class="meta">November 2022 – March 2023 · Dominican Republic</p>
+          <ul class="bullets">
+            <li>Oversaw the quality of multiple campaigns.</li>
+            <li>Provided performance visibility using tools like Excel, PowerPoint, and Looker Studio.</li>
+            <li>Developed plans to maintain high interaction quality.</li>
+            <li>Managed and supported the QA team to ensure consistent results across campaigns.</li>
+          </ul>
+        </article>
+        <br />
+        <article>
+          <h3 class="role">Quality Assurance Supervisor – Acquire BPO</h3>
+          <p class="meta">March 2018 – November 2022</p>
+          <ul class="bullets">
+            <li>Led a large team of quality assurance professionals.</li>
+            <li>Oversaw the evaluation of customer interactions to ensure quality standards.</li>
+            <li>Developed data-driven improvement strategies to enhance performance.</li>
+            <li>Implemented continuous improvement cycles to maintain high-quality standards.</li>
+          </ul>
+        </article>
+        <br />
+        <article>
+          <h3 class="role">Team Leader – Convergys</h3>
+          <p class="meta">December 2012 – March 2018</p>
+          <ul class="bullets">
+            <li>Managed and monitored agents across different campaigns.</li>
+            <li>Worked with various clients, each with unique KPIs and SOWs, expanding industry knowledge.</li>
+            <li>Created reports to provide visibility on key campaign aspects (AHT, CSAT, NPS, Quality, Productivity, Attendance).</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
